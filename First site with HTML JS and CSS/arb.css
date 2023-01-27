@@ -1,0 +1,156 @@
+body{
+    background-color: #f5efe9;
+
+}
+.grid-container{
+    display: grid;
+  grid-template-areas:
+    'header header header header logo'
+    'main main right right right'
+    'footer footer footer footer footer';
+  gap: 10px;
+  padding: 10px;
+}
+.menu {
+    grid-area: header;
+    margin-left: auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+#menuelement{
+    color: #001112;
+    float: right;
+    border: 1px solid #003054;
+    padding: 25px ;    
+    text-decoration: none;
+    background-color: #f8efc2;
+    margin: 4px;
+    
+}
+#menuelement:hover{
+    scale: 1.05 1.05;
+    background-color: #f8afe9;    
+}
+.text1{
+
+    margin-left: auto;
+    grid-area: main;
+    color: #f8ccbf;
+}
+.text2{
+    grid-area: right;
+    text-align: center;
+    margin: auto auto auto 30%;
+
+
+}
+.footer{
+    grid-area: footer;
+    color: #f8ccbf;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
+    opacity: 0.5;
+
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    grid-area: logo;
+    margin-right: 100px;
+}
+.logo{position: relative;
+        margin-right: 100%;}
+#dog{
+    position: absolute;
+    margin-right: 30%;
+    border-radius: 50%;
+    height: 100px;
+    border: 7px solid #f8efc2;
+}
+#dog:hover{
+    border: 7px solid #f8afe9;
+}
+#scam{
+    top:25px;
+    left: 10px;
+    position: absolute;
+    grid-area: logo;
+    height: 50px;
+    opacity: 0;
+}
+.listOfTags{
+
+    list-style-type: none;
+}
+#scam:hover{
+    opacity: 1;
+}
+#smart{
+    border-radius: 8px;
+    height: 100px;
+}
+h1 {
+    background-image: url("resources/raining-money-money.gif");
+    font-size: 1.9em;
+    color: #7c795d;
+  }
+
+  h2 {
+    font-size: 1em;
+    color:#9b2b3c;
+  }
+
+  pre {
+    color: #d94d3d;
+    max-width: 10px;
+    font-size: 0.85em;
+      font-family: 'Trocchi', serif;
+}
+p {
+    color: #d94d3d;
+    font-size: 0.7em;
+    font-family: 'Trocchi', serif;
+}
+
+
+
+.increase-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+  #number-clicks{
+      font-size: 20px;
+      max-width: 100px;
+      margin-left: 15%;
+      margin-bottom: auto;
+
+      margin-top: auto;
+  }
+  #bitcoin{
+      margin-top: 7%;
+      margin-bottom: auto;
+      margin-left: 10px;
+      height: 40px;
+  }
+  #spørsmål{
+      font-size: 12px;
+      height: 20px;
+      margin-top: 20%;
+      border-radius: 50%;
+      right: 9.5%;
+      position: relative;
+  }
+  #spørsmål:hover{
+      background-color: #f8afe9;
+  }
+  #hidenmassage{
+      opacity: 0;
+  }
