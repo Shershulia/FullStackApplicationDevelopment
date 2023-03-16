@@ -1,9 +1,7 @@
 package ntnu.stud.ivansh.RestAPIforCalculation.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.Max;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 
 @Entity
@@ -16,12 +14,17 @@ public class Calculation {
     @Size( max = 1)
     private String operation;
     private String result;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private User user;
 
-    public Calculation(String firstComponent, String secondComponent, String operation, String result) {
+    public Calculation(int id, String firstComponent, String secondComponent, String operation, String result, User user) {
+        this.id = id;
         this.firstComponent = firstComponent;
         this.secondComponent = secondComponent;
         this.operation = operation;
         this.result = result;
+        this.user = user;
     }
 
     public Calculation() {
@@ -66,5 +69,13 @@ public class Calculation {
 
     public void setResult(String result) {
         this.result = result;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
